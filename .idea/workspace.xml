@@ -1,30 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="68dfb353-bbe7-44e8-9c9d-0e97f83a856d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dummy-json-api-automation.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/auth_api.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/base_api.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/products_api.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/user_api.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/users.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pytest.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/test_auth.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/test_products.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/test_users.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/config.py" afterDir="false" />
-    </list>
+    <list default="true" id="68dfb353-bbe7-44e8-9c9d-0e97f83a856d" name="Changes" comment="Organización de la estructura del proyecto" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -86,9 +63,30 @@
       <option name="presentableId" value="Default" />
       <updated>1785950587748</updated>
     </task>
+    <task id="LOCAL-00001" summary="Organización de la estructura del proyecto">
+      <option name="closed" value="true" />
+      <created>1785951525163</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1785951525163</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Organización de la estructura del proyecto">
+      <option name="closed" value="true" />
+      <created>1785951538357</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1785951538357</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Organización de la estructura del proyecto" />
+    <option name="LAST_COMMIT_MESSAGE" value="Organización de la estructura del proyecto" />
   </component>
 </project>
