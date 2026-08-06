@@ -9,7 +9,7 @@ class BaseAPI:
         self.session = requests.Session()
         self.session.headers.update(self.headers)
 
-    def _request(self, method, endpoint, payload=None, params=None):
+    def _request(self, method, endpoint, payload=None, params=None): #Metodo interno para reutilizar código ye vitar duplicación
         return self.session.request(
             method,
             self.base_url + endpoint,
