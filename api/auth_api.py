@@ -1,6 +1,6 @@
 from api.base_api import BaseAPI
 
-class AuthAPI(BaseAPI): #Esta API se encargará de hacer el proceso de autenticación y almacenar/refrescar el JWT en los headers de la sesión
+class AuthAPI(BaseAPI):#Esta API se encargará de hacer el proceso de autenticación y almacenar/refrescar el JWT en los headers de la sesión
 
     def _set_token(self, token): #Metodo interno para actualizar el JWT en los headers de la sesión.
         self.session.headers.update({
