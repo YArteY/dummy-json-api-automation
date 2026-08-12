@@ -21,10 +21,11 @@ class ProductsAPI(BaseAPI):
         return self.post('/products/add',payload)
 
     def update_product(self, product_id, payload):
-        return self.put("/products/{product_id}", payload)
+        return self.put(f"/products/{product_id}", payload)
 
     def patch_product(self, product_id, payload):
-        return self.patch("/products/{product_id}", payload)
+        return self.patch(f"/products/{product_id}", payload)
 
     def delete_product(self, product_id):
         return self.delete(f"/products/{product_id}")
+

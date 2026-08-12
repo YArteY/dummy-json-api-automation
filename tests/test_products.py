@@ -1,5 +1,3 @@
-from idlelib import query
-
 from api.client_api import APIClient
 
 api = APIClient()
@@ -134,6 +132,136 @@ def test_get_all_categories():
     assert isinstance(category["slug"], str)
     assert isinstance(category["name"], str)
     assert isinstance(category["url"], str)
+
+
+def test_get_success_products_by_category():
+    response = api.products.get_products_by_category(category="smartphones")
+
+    assert response.status_code == 200
+    assert response.elapsed.total_seconds() < 2
+
+    data = response.json()
+
+    assert "products" in data
+    assert "total" in data
+    assert "skip" in data
+    assert "limit" in data
+
+    assert isinstance(data["products"], list)
+    assert isinstance(data["total"], int)
+    assert isinstance(data["skip"], int)
+    assert isinstance(data["limit"], int)
+
+    product = data['products'][0]
+
+    assert "id" in product
+    assert "title" in product
+    assert "description" in product
+    assert "price" in product
+    assert "category" in product
+
+    assert isinstance(product["id"], int)
+    assert isinstance(product["title"], str)
+    assert isinstance(product["description"], str)
+    assert isinstance(product["price"], (int, float))
+    assert isinstance(product["category"], str)
+
+def test_failed_get_products_by_category():
+    response = api.products.get_products_by_category(category="")
+
+    assert response.status_code == 404
+    assert response.elapsed.total_seconds() < 2
+
+def test_success_add_product():
+    payload = {
+            "title": "iPhone 16",
+            "description": "the perfect balance of price and quality",
+            "price": 800,
+            "category": "smartphones"
+        }
+    response = api.products.add_product(payload)
+
+    assert response.status_code == 201
+    assert response.elapsed.total_seconds() < 2
+
+    data = response.json()
+
+    assert "id" in data
+    assert "title" in data
+    assert "description" in data
+    assert "price" in data
+    assert "category" in data
+
+    assert isinstance(data["id"], int)
+    assert isinstance(data["title"], str)
+    assert isinstance(data["description"], str)
+    assert isinstance(data["price"], (int, float))
+    assert isinstance(data["category"], str)
+
+def test_update_product():
+    product_id = 5
+    payload = {
+        "title": "iPhone 16",
+        "description": "the perfect balance of price and quality",
+        "price": 800,
+        "category": "smartphones"
+    }
+    response = api.products.update_product(product_id, payload)
+
+    assert response.status_code == 200
+    assert response.elapsed.total_seconds() < 2
+
+    data = response.json()
+
+    assert "id" in data
+    assert data["title"] == payload["title"]
+    assert data["description"] == payload["description"]
+    assert data["price"] == payload["price"]
+    assert data["category"] == payload["category"]
+
+    assert isinstance(data["id"], int)
+    assert isinstance(data["title"], str)
+    assert isinstance(data["description"], str)
+    assert isinstance(data["price"], (int, float))
+    assert isinstance(data["category"], str)
+
+def test_patch_product():
+    product_id = 5
+    payload = {
+        "title": "iPhone 16",
+    }
+    response = api.products.patch_product(product_id, payload)
+
+    assert response.status_code == 200
+    assert response.elapsed.total_seconds() < 2
+
+    data = response.json()
+
+    assert "id" in data
+    assert data["title"] == payload["title"]
+    assert "description" in data
+    assert "price" in data
+    assert "category" in data
+
+    assert isinstance(data["id"], int)
+    assert isinstance(data["title"], str)
+    assert isinstance(data["description"], str)
+    assert isinstance(data["price"], (int, float))
+    assert isinstance(data["category"], str)
+
+def test_delete_product():
+    product_id = 5
+    response = api.products.delete_product(product_id)
+
+    assert response.status_code == 200
+    assert response.elapsed.total_seconds() < 2
+
+    data = response.json()
+
+    assert data["id"] == product_id
+    assert data["isDeleted"] is True
+
+
 
 
 

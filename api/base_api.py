@@ -24,8 +24,8 @@ class BaseAPI:
     def put(self, endpoint, payload=None):
         return self._request("put", endpoint, payload)
 
-    def patch(self, endpoint, payload=None):
-        return self._request("patch", endpoint, payload)
+    def patch(self, endpoint,payload=None, params=None):
+        return self._request("patch", endpoint,payload=payload, params=params,)
 
 
 

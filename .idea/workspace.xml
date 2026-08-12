@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="68dfb353-bbe7-44e8-9c9d-0e97f83a856d" name="Changes" comment="Creación de APIClient, ProductsAPI y primeros test con products. Reestructuración de diseño del framework">
+    <list default="true" id="68dfb353-bbe7-44e8-9c9d-0e97f83a856d" name="Changes" comment="Se agregan mas Test para el apartado de productos y se crea la fixture de authenticated_user para los test de Authorization">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/auth_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/auth_api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_auth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/base_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/base_api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/products_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/products_api.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_products.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_products.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,15 +50,22 @@
     "Python tests.Python tests for tests.test_auth.test_failure_login.executor": "Run",
     "Python tests.Python tests for tests.test_auth.test_success_login.executor": "Run",
     "Python tests.Python tests for tests.test_auth.test_success_logout.executor": "Run",
+    "Python tests.Python tests for tests.test_products.test_delete_product.executor": "Run",
+    "Python tests.Python tests for tests.test_products.test_failed_add_product.executor": "Run",
     "Python tests.Python tests for tests.test_products.test_failed_get_product_by_id.executor": "Run",
+    "Python tests.Python tests for tests.test_products.test_failed_get_products_by_category.executor": "Run",
     "Python tests.Python tests for tests.test_products.test_failed_search_products.executor": "Run",
     "Python tests.Python tests for tests.test_products.test_get_all_categories.executor": "Run",
     "Python tests.Python tests for tests.test_products.test_get_all_categories_sucess.executor": "Run",
     "Python tests.Python tests for tests.test_products.test_get_all_products.executor": "Run",
     "Python tests.Python tests for tests.test_products.test_get_product_by_id.executor": "Run",
     "Python tests.Python tests for tests.test_products.test_get_product_structure.executor": "Run",
+    "Python tests.Python tests for tests.test_products.test_get_products_by_category.executor": "Run",
+    "Python tests.Python tests for tests.test_products.test_patch_product.executor": "Run",
     "Python tests.Python tests for tests.test_products.test_search_products.executor": "Run",
+    "Python tests.Python tests for tests.test_products.test_success_add_product.executor": "Run",
     "Python tests.Python tests for tests.test_products.test_sucess_search_products.executor": "Run",
+    "Python tests.Python tests for tests.test_products.test_update_product.executor": "Run",
     "Python.base_api.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
@@ -80,8 +86,8 @@
       <recent name="C:\Users\user\OneDrive\Escritorio\dummy-json-api-automation" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for tests.test_products.test_get_all_categories">
-    <configuration name="Python tests for tests.test_products.test_failed_get_product_by_id" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.Python tests for tests.test_products.test_delete_product">
+    <configuration name="Python tests for tests.test_products.test_delete_product" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="dummy-json-api-automation" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -94,11 +100,11 @@
       <option name="DEBUG_JUST_MY_CODE" value="false" />
       <option name="RUN_TOOL" value="" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.test_products.test_failed_get_product_by_id&quot;" />
+      <option name="_new_target" value="&quot;tests.test_products.test_delete_product&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for tests.test_products.test_failed_search_products" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for tests.test_products.test_failed_add_product" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="dummy-json-api-automation" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -111,11 +117,11 @@
       <option name="DEBUG_JUST_MY_CODE" value="false" />
       <option name="RUN_TOOL" value="" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.test_products.test_failed_search_products&quot;" />
+      <option name="_new_target" value="&quot;tests.test_products.test_failed_add_product&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for tests.test_products.test_get_all_categories" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for tests.test_products.test_patch_product" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="dummy-json-api-automation" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -128,11 +134,11 @@
       <option name="DEBUG_JUST_MY_CODE" value="false" />
       <option name="RUN_TOOL" value="" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.test_products.test_get_all_categories&quot;" />
+      <option name="_new_target" value="&quot;tests.test_products.test_patch_product&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for tests.test_products.test_get_all_categories_sucess" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for tests.test_products.test_success_add_product" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="dummy-json-api-automation" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -145,11 +151,11 @@
       <option name="DEBUG_JUST_MY_CODE" value="false" />
       <option name="RUN_TOOL" value="" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.test_products.test_get_all_categories_sucess&quot;" />
+      <option name="_new_target" value="&quot;tests.test_products.test_success_add_product&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for tests.test_products.test_sucess_search_products" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for tests.test_products.test_update_product" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="dummy-json-api-automation" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -162,17 +168,17 @@
       <option name="DEBUG_JUST_MY_CODE" value="false" />
       <option name="RUN_TOOL" value="" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.test_products.test_sucess_search_products&quot;" />
+      <option name="_new_target" value="&quot;tests.test_products.test_update_product&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests for tests.test_products.test_get_all_categories" />
-        <item itemvalue="Python tests.Python tests for tests.test_products.test_get_all_categories_sucess" />
-        <item itemvalue="Python tests.Python tests for tests.test_products.test_failed_search_products" />
-        <item itemvalue="Python tests.Python tests for tests.test_products.test_failed_get_product_by_id" />
-        <item itemvalue="Python tests.Python tests for tests.test_products.test_sucess_search_products" />
+        <item itemvalue="Python tests.Python tests for tests.test_products.test_delete_product" />
+        <item itemvalue="Python tests.Python tests for tests.test_products.test_patch_product" />
+        <item itemvalue="Python tests.Python tests for tests.test_products.test_update_product" />
+        <item itemvalue="Python tests.Python tests for tests.test_products.test_failed_add_product" />
+        <item itemvalue="Python tests.Python tests for tests.test_products.test_success_add_product" />
       </list>
     </recent_temporary>
   </component>
@@ -255,7 +261,15 @@
       <option name="project" value="LOCAL" />
       <updated>1786141366449</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Se agregan mas Test para el apartado de productos y se crea la fixture de authenticated_user para los test de Authorization">
+      <option name="closed" value="true" />
+      <created>1786467900703</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1786467900703</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,6 +279,7 @@
     <MESSAGE value="Organización de la estructura del proyecto" />
     <MESSAGE value="Creación de BaseAPI para la comunicación HTTP y UsersAPI para al asignación de ENDPOINTS quen interactuen con usuarios" />
     <MESSAGE value="Creación de APIClient, ProductsAPI y primeros test con products. Reestructuración de diseño del framework" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creación de APIClient, ProductsAPI y primeros test con products. Reestructuración de diseño del framework" />
+    <MESSAGE value="Se agregan mas Test para el apartado de productos y se crea la fixture de authenticated_user para los test de Authorization" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se agregan mas Test para el apartado de productos y se crea la fixture de authenticated_user para los test de Authorization" />
   </component>
 </project>
