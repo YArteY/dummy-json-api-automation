@@ -10,7 +10,7 @@ class UsersAPI(BaseAPI):
         return self.get(f"/users/{user_id}")
 
     def create_user(self, payload):
-        return self.post("/users", payload)
+        return self.post("/users/add", payload)
 
     def delete_user(self, user_id):
         return self.delete(f"/users/{user_id}")

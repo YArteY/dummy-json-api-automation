@@ -1,20 +1,18 @@
-from api.client_api import APIClient
 import pytest
 
+from api.client_api import APIClient
+from data.users import VALID_USER
+
+
 @pytest.fixture
-#Se crea esta Fixture para llamar una sesión activa y valida cuando algún test lo requiera
-def authenticated_user():
+def api_client():
+    """Crea un cliente de API sin autenticación."""
+    return APIClient()
 
-    api = APIClient()
 
-    payload = {
-        'username': 'emilys',
-        'password': 'emilyspass',
-        'expireInMins': 60
-    }
-
-    response = api.auth.login(payload)
-
+@pytest.fixture
+def authenticated_user(api_client):
+    """Devuelve un cliente con una sesión activa y válida."""
+    response = api_client.auth.login(VALID_USER)
     assert response.status_code == 200
-
-    return api
+    return api_client
